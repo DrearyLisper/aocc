@@ -1,0 +1,17 @@
+package main
+
+fun main(a, b, c) {
+   input = :io:read("input.txt");
+   
+   i = 0
+
+   for c in input {
+        if c == '(' {
+            i = i + 1;
+        } else {
+            i = i - 1;
+        }
+   }
+
+    :io:print(i);
+}
