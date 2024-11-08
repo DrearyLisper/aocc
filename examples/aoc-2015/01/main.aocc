@@ -1,9 +1,9 @@
 package main
 
-fun main(a, b, c) {
+fun main(argv) {
    input = :io:read("input.txt");
    
-   i = 0
+   i = 0;
 
    for c in input {
         if c == '(' {

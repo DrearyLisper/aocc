@@ -9,4 +9,6 @@ main :: IO ()
 main = do
     args <- getArgs
     content <- readFile $ head args
-    print $ Parsing.parse Grammar.package content
+    let (parsed, remaining) = head $ Parsing.parse Grammar.package content
+    print parsed
+    print remaining

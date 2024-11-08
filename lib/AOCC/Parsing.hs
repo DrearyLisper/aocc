@@ -124,6 +124,9 @@ integer = token int
 symbol :: String -> Parser String
 symbol xs = token (string xs)
 
+anything :: Parser String
+anything = many $ sat $ not . isSpace
+
 list :: String -> String -> String -> Parser a -> Parser [a]
 list openP closeP sep p =
   ( do
